@@ -1,0 +1,22 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+GET     /district/all            	@controllers.Test.getAllDistricts()
+GET     /district/allOrder           @controllers.Test.getAllDistrictsOrder()
+
+GET     /place/all             		@controllers.Test.getAllPlaces()
+GET     /place/allOrder             @controllers.Test.getAllPlacesOrder()
+
+GET     /placeValues/all            @controllers.Test.getAllPlaceValues()
+GET		/out						@controllers.Test.getOut()
+
+GET		/out2						@controllers.Test.getOut_two()
+
+GET		/outbyid						@controllers.Test.getPlaceByID()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
